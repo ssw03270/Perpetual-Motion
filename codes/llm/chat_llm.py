@@ -3,7 +3,6 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 
 # CUDA 사용 가능 여부 확인
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
-device = 'cpu'
 
 tokenizer = AutoTokenizer.from_pretrained("EleutherAI/polyglot-ko-12.8b")
 model = AutoModelForCausalLM.from_pretrained("EleutherAI/polyglot-ko-12.8b").to(device)
